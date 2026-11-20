@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>School Readings</title>
+  <meta name="description" content="My course readings for the term, organized by class.">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="theme-color" content="#f6f3ee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#16171b" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f5bd3'/%3E%3Cpath d='M18 18h12a6 6 0 0 1 6 6v24a5 5 0 0 0-5-5H18zM46 18H34a6 6 0 0 0-6 6v24a5 5 0 0 1 5-5h13z' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to readings</a>
+
+  <header class="top">
+    <div class="wrap">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 5h5a3 3 0 0 1 3 3v11a2.5 2.5 0 0 0-2.5-2.5H4zM20 5h-5a3 3 0 0 0-3 3v11a2.5 2.5 0 0 1 2.5-2.5H20z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </span>
+        <div>
+          <h1 id="title">Fall Readings</h1>
+          <p class="summary" id="summary"></p>
+        </div>
+      </div>
+
+      <div class="search" role="search">
+        <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <label for="q" class="visually-hidden">Search readings</label>
+        <input id="q" type="search" placeholder="Search books or classes" autocomplete="off" spellcheck="false" enterkeyhint="search">
+        <kbd class="hint" aria-hidden="true">/</kbd>
+      </div>
+    </div>
+  </header>
+
+  <nav class="chips-bar" aria-label="Filter by class">
+    <div class="wrap">
+      <div class="chips" id="chips" role="radiogroup" aria-label="Class"></div>
+    </div>
+  </nav>
+
+  <main id="main" class="wrap" tabindex="-1">
+    <p class="live visually-hidden" id="live" aria-live="polite"></p>
+    <div id="courses"></div>
+    <div class="empty-state" id="empty" hidden>
+      <p class="empty-title">No readings match “<span id="empty-q"></span>”</p>
+      <button class="btn" id="clear" type="button">Clear search</button>
+    </div>
+  </main>
+
+  <footer class="foot wrap">
+    <p>Tap a book to open it in a new tab. <span class="legend"><span class="tag drive">In Drive</span> you already have a copy · <span class="tag store">Bookstore</span> still to buy</span></p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
